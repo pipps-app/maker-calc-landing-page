@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- Primary Meta Tags -->
+  <title>PIPPS Maker Calc: Product Formulation & Cost Management SaaS Platform</title>
+  <meta name="title" content="PIPPS Maker Calc: Product Formulation & Cost Management SaaS Platform">
+  <meta name="description" content="Streamline your product development with PIPPS Maker Calc. Manage raw materials, create formulations, track costs, and generate detailed reports. Free plan available. Perfect for manufacturers, cosmetics, food & beverage producers.">
+  <meta name="keywords" content="product formulation software, cost management, manufacturing software, recipe calculator, material management, SaaS platform, batch production, cost analysis, formulation creation">
+  <meta name="author" content="PIPPS Smart Apps - J.C Epiphany">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourusername.github.io/maker-calc-landing/">
+  <meta property="og:title" content="PIPPS Maker Calc: Product Formulation & Cost Management">
+  <meta property="og:description" content="Streamline your product development with powerful formulation and cost management tools. Free plan available.">
+  <meta property="og:image" content="https://static.wixstatic.com/media/297e2c_219dd8a8a2004c38ae6baf48171cea73~mv2.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://yourusername.github.io/maker-calc-landing/">
+  <meta property="twitter:title" content="PIPPS Maker Calc: Product Formulation & Cost Management">
+  <meta property="twitter:description" content="Streamline your product development with powerful formulation and cost management tools. Free plan available.">
+  <meta property="twitter:image" content="https://static.wixstatic.com/media/297e2c_219dd8a8a2004c38ae6baf48171cea73~mv2.png">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://yourusername.github.io/maker-calc-landing/">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/297e2c_219dd8a8a2004c38ae6baf48171cea73~mv2.png">
+  
+  <!-- Structured Data for AI/Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PIPPS Maker Calc",
+    "description": "Web-based SaaS platform for product formulation and cost management",
+    "url": "https://www.pipps.app",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web Browser",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free Plan",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer", 
+        "name": "Pro Plan",
+        "price": "19",
+        "priceCurrency": "USD"
+      }
+    ],
+    "creator": {
+      "@type": "Organization",
+      "name": "PIPPS Smart Apps",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "J.C Epiphany",
+        "url": "https://jcepiphany.com/"
+      }
+    },
+    "featureList": [
+      "Material Management",
+      "Formulation Creation", 
+      "Cost Tracking & Analysis",
+      "Tiered Reporting",
+      "Import/Export System",
+      "Vendor Management"
+    ]
+  }
+  </script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9fafb;
+      color: #111827;
+    }
+
+    header {
+      background-color: #4f46e5; /* PIPPS primary color */
+      padding: 2.5rem 1rem;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden; /* Ensures background image doesn't overflow */
+    }
+
+    .header-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* Placeholder image, replace with your own relevant image */
+      background-image: url('https://images.unsplash.com/photo-1505685211952-a6f5c452060c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.3; /* Adjust opacity for text readability */
+      z-index: 0;
+    }
+
+    .header-content {
+      position: relative; /* Ensures content is above the background */
+      z-index: 1;
+    }
+
+    .logo {
+      max-width: 180px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    p.lead {
+      font-size: 1.35rem;
+      margin-bottom: 2rem;
+      color: #e5e7eb; /* Lighter text for contrast */
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+      background-color: white;
+      padding: 2.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.06);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: #4f46e5;
+      font-weight: 700;
+    }
+
+    /* Navigation for sections */
+    nav.section-nav {
+      text-align: center;
+      margin-bottom: 2rem;
+      background-color: #eef2ff;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+
+    nav.section-nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #4f46e5;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav.section-nav a:hover {
+      color: #3b82f6;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .feature-list li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .feature-list li span {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+
+    .feature-icon {
+      background-color: #eef2ff;
+      color: #4f46e5;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      width: 60px; /* Fixed width for consistent icon size */
+      height: 60px; /* Fixed height for consistent icon size */
+      margin-bottom: 0.5rem;
+    }
+
+    /* Icons - using Font Awesome */
+    /* You'll need to link Font Awesome CDN in the head if you haven't already */
+
+    .cta-button {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto;
+      padding: 0.8rem 2rem;
+      background-color: #10b981; /* Green color for CTA */
+      color: white;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 6px rgba(16, 185, 129, 0.3);
+    }
+
+    .cta-button:hover {
+      background-color: #0d9488; /* Darker green on hover */
+    }
+
+    .target-market {
+      background-color: #f3f4f6;
+      padding: 2.5rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .target-market h2 {
+      color: #111827;
+    }
+
+    .target-market p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 1rem auto;
+    }
+
+    .target-list {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .target-list li {
+      background-color: #eef2ff;
+      color: #4f46e5;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-weight: 500;
+    }
+
+    .pricing-section {
+      text-align: center;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .price-card {
+      background-color: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center; /* Centers inline content like H3, Price */
+      display: flex; /* Ensure flex is applied */
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items horizontally */
+    }
+
+    .price-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .price-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #4f46e5;
+      text-align: center; /* Ensure heading is centered */
+    }
+
+    .price-card .price {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 1rem;
+      text-align: center; /* Ensure price is centered */
+    }
+
+    .price-card .price-details {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-bottom: 1.5rem;
+      text-align: center; /* Ensure details are centered */
+    }
+
+    .price-card ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 2rem;
+      width: 100%; /* Allow ul to take full width for centering trick */
+      text-align: left; /* Still want text within li to be left aligned */
+    }
+
+    .price-card li {
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #374151;
+      justify-content: center; /* Center the flex items (icon and text) */
+    }
+
+    /* Special handling for centering the list itself */
+    .price-card ul.centered-list {
+        text-align: center; /* Center the text within the list if it were text-only */
+        display: table; /* Helps with centering block elements */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .price-card li.centered-list-item {
+        display: inline-block; /* Allows list items to sit side-by-side if they wrap, or stack */
+        text-align: center; /* Center text within the list item */
+        vertical-align: top; /* Align items from the top if they wrap */
+        margin-right: 15px; /* Add space between list items */
+        margin-left: 15px;
+    }
+
+    .price-card li .icon-check {
+      color: #10b981; /* Green checkmark */
+    }
+
+    .price-card .btn-cta {
+      display: block;
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .free-plan .btn-cta {
+      background-color: #d1d5db;
+      color: #1f2937;
+      border: 1px solid #d1d5db;
+    }
+    .free-plan .btn-cta:hover {
+      background-color: #9ca3af;
+      border: 1px solid #9ca3af;
+    }
+
+    .starter-plan .btn-cta {
+      background-color: #e5e7eb; /* Light gray for Starter */
+      color: #1f2937;
+      border: 1px solid #e5e7eb;
+    }
+    .starter-plan .btn-cta:hover {
+      background-color: #d1d5db;
+      border: 1px solid #d1d5db;
+    }
+
+    .pro-plan .btn-cta {
+      background-color: #4f46e5;
+      color: white;
+      border: 1px solid #4f46e5;
+    }
+    .pro-plan .btn-cta:hover {
+      background-color: #4338ca;
+      border: 1px solid #4338ca;
+    }
+
+    .professional-plan .btn-cta {
+      background-color: #10b981; /* Green for Professional */
+      color: white;
+      border: 1px solid #10b981;
+    }
+    .professional-plan .btn-cta:hover {
+      background-color: #0d9488;
+      border: 1px solid #0d9488;
+    }
+
+    .business-plan .btn-cta {
+      background-color: #10b981; /* Re-using Green for Business */
+      color: white;
+      border: 1px solid #10b981;
+    }
+    .business-plan .btn-cta:hover {
+      background-color: #0d9488;
+      border: 1px solid #0d9488;
+    }
+
+    .enterprise-plan .btn-cta {
+      background-color: #3b82f6; /* Blue for Enterprise */
+      color: white;
+      border: 1px solid #3b82f6;
+    }
+    .enterprise-plan .btn-cta:hover {
+      background-color: #2563eb;
+      border: 1px solid #2563eb;
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      border: none;
+      outline: none;
+      background-color: #4f46e5;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 18px;
+      opacity: 0.7;
+      transition: opacity 0.3s ease, background-color 0.3s ease;
+      display: none; /* Hidden by default, shown with JavaScript */
+    }
+
+    .back-to-top:hover {
+      background-color: #4338ca;
+      opacity: 1;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #111827;
+      color: #d1d5db;
+      padding: 2.5rem 1rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      p.lead {
+        font-size: 1.1rem;
+      }
+      .feature-list {
+        grid-template-columns: 1fr;
+      }
+      section {
+        padding: 1.5rem;
+      }
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+      nav.section-nav a {
+        margin: 0.5rem;
+        display: block; /* Stack links on smaller screens */
+      }
+    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .logo {
+        max-width: 150px;
+      }
+      .cta-button {
+        font-size: 1.1rem;
+        padding: 0.7rem 1.5rem;
+      }
+      .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px;
+        font-size: 16px;
+      }
+    }
+  </style>
+  <!-- Link to Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-background"></div>
+    <div class="header-content">
+      <!-- Linked Logo -->
+      <a href="https://www.pipps.app" target="_blank" rel="noopener noreferrer">
+        <img src="https://static.wixstatic.com/media/297e2c_219dd8a8a2004c38ae6baf48171cea73~mv2.png" alt="PIPPS Maker Calc Logo" class="logo">
+      </a>
+      <h1>PIPPS Maker Calc</h1>
+      <p class="lead">The comprehensive solution for product formulation and cost management.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav class="section-nav">
+      <a href="#overview">Overview</a>
+      <a href="#who-is-it-for">Who Is It For?</a>
+      <a href="#key-features">Key Features</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+
+    <section id="overview">
+      <h2>Unlock Your Business Potential</h2>
+      <p style="text-align: center; max-width: 800px; margin: 1rem auto 2rem;">PIPPS Maker Calc is a powerful, web-based SaaS platform designed to streamline your product development process. From managing raw materials to calculating costs and generating detailed reports, we empower businesses to make informed decisions and drive profitability.</p>
+
+      <ul class="feature-list">
+        <li>
+          <div class="feature-icon"><i class="fas fa-boxes"></i></div>
+          <span>Material Management</span>
+        </li>
+        <li>
+          <div class="feature-icon"><i class="fas fa-flask"></i></div>
+          <span>Formulation Creation</span>
+        </li>
+        <li>
+          <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+          <span>Cost Tracking & Analysis</span>
+        </li>
+        <li>
+          <div class="feature-icon"><i class="fas fa-file-alt"></i></div>
+          <span>Tiered Reporting</span>
+        </li>
+        <li>
+          <div class="feature-icon"><i class="fas fa-exchange-alt"></i></div>
+          <span>Import/Export System</span>
+        </li>
+        <li>
+          <div class="feature-icon"><i class="fas fa-store"></i></div>
+          <span>Vendor Management</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="who-is-it-for">
+      <h2>Who is PIPPS Maker Calc For?</h2>
+      <p style="text-align: center; max-width: 800px; margin: 1rem auto 2rem;">PIPPS Maker Calc is designed for businesses that create physical products and need to precisely manage their costs, optimize formulations, and ensure profitability. This includes:</p>
+      <ul class="target-list">
+        <li>Small to Medium Manufacturing Businesses</li>
+        <li>Product Formulators & Developers</li>
+        <li>Cosmetic & Personal Care Manufacturers</li>
+        <li>Food & Beverage Producers</li>
+        <li>Craft Businesses & Artisans</li>
+        <li>Specialty Chemical Suppliers</li>
+        <li>Companies focused on Batch Production</li>
+        <li>Businesses needing accurate Cost Analysis and Pricing Strategies</li>
+        <li>Event Planners & Caterers</li>
+        <li>Educational & Training Programs</li>
+      </ul>
+    </section>
+
+    <section id="key-features">
+      <h2 style="text-align: center;">Key Features at a Glance</h2>
+      <p style="text-align: center; max-width: 800px; margin: 1rem auto 2rem;">Discover the robust capabilities that make PIPPS Maker Calc indispensable for your business.</p>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem 4rem; max-width: 800px; margin: 0 auto; justify-items: start; align-items: start; padding: 0 1rem; box-sizing: border-box;">
+        <div style="text-align: left; width: 100%; box-sizing: border-box;">
+          <h3>1. Material Management</h3>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Raw Material Database</li>
+            <li><i class="fas fa-check-circle"></i> Vendor Management</li>
+            <li><i class="fas fa-check-circle"></i> Category Organization</li>
+            <li><i class="fas fa-check-circle"></i> Cost Tracking</li>
+            <li><i class="fas fa-check-circle"></i> File Attachments</li>
+            <li><i class="fas fa-check-circle"></i> Bulk Import</li>
+          </ul>
+        </div>
+        <div style="text-align: left; width: 100%; box-sizing: border-box;">
+          <h3>2. Formulation Creation</h3>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Formula/ Recipe Builder</li>
+            <li><i class="fas fa-check-circle"></i> Cost Calculations</li>
+            <li><i class="fas fa-check-circle"></i> Individual item managment</li>
+            <li><i class="fas fa-check-circle"></i> Batch Information</li>
+            <li><i class="fas fa-check-circle"></i> File Attachments</li>
+          </ul>
+        </div>
+        <div style="text-align: left; width: 100%; box-sizing: border-box;">
+          <h3>3. Reporting & Analytics</h3>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Tiered Access (Free, Pro, Business, Enterprise)</li>
+            <li><i class="fas fa-check-circle"></i> Advanced Analytics & Custom Reports</li>
+            <li><i class="fas fa-check-circle"></i> PDF & JSON Export</li>
+          </ul>
+        </div>
+        <div style="text-align: left; width: 100%; box-sizing: border-box;">
+          <h3>4. Comprehensive Online Help</h3>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Step-by-step Guides</li>
+            <li><i class="fas fa-check-circle"></i> Searchable Articles</li>
+            <li><i class="fas fa-check-circle"></i> Priority Tutorials</li>
+            <li><i class="fas fa-check-circle"></i> Email Support & Forums (coming soon)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+      <h2>Choose Your Plan</h2>
+      <p style="text-align: center; max-width: 800px; margin: 1rem auto 2rem;">Start free, then upgrade when you need more. Enjoy a 14-day money-back guarantee on all paid plans.</p>
+      <div class="pricing-grid">
+
+        <!-- Free Tier -->
+        <div class="price-card free-plan">
+          <h3>Free</h3>
+          <div class="price">$0<span>/forever</span></div>
+          <div class="price-details">Ideal for starting out</div>
+          <ul>
+            <li><i class="fas icon-check"></i> Up to 5 raw materials</li>
+            <li><i class="fas icon-check"></i> Up to 1 formulation</li>
+            <li><i class="fas icon-check"></i> 2 vendors & 2 categories</li>
+            <li><i class="fas icon-check"></i> Basic cost calculations</li>
+            <li><i class="fas icon-check"></i> 1 file attachment</li>
+            <li><i class="fas icon-check"></i> 5MB storage</li>
+            <li><i class="fas icon-check"></i> Help documentation</li>
+          </ul>
+          <a href="https://jcepiphany.myshopify.com/products/pipps-maker-calc?variant=52219037778285" class="btn-cta">Current Plan</a>
+        </div>
+
+        <!-- Starter Tier -->
+        <div class="price-card starter-plan">
+          <h3>Starter</h3>
+          <div class="price">$7<span>/month</span></div>
+          <div class="price-details">Get started with more features</div>
+          <ul>
+            <li><i class="fas icon-check"></i> Up to 20 raw materials</li>
+            <li><i class="fas icon-check"></i> Up to 8 formulations</li>
+            <li><i class="fas icon-check"></i> 5 vendors & 5 categories</li>
+            <li><i class="fas icon-check"></i> Basic cost calculations</li>
+            <li><i class="fas icon-check"></i> 5 file attachments</li>
+            <li><i class="fas icon-check"></i> 30MB storage</li>
+            <li><i class="fas icon-check"></i> Email support</li>
+          </ul>
+          <a href="https://jcepiphany.myshopify.com/products/pipps-maker-calc?variant=52219037811053" class="btn-cta">Subscribe for $7/month</a>
+        </div>
+
+        <!-- Pro Tier -->
+        <div class="price-card pro-plan">
+          <h3>Pro</h3>
+          <div class="price">$19<span>/month</span></div>
+          <div class="price-details">Most Popular</div>
+          <ul>
+            <li><i class="fas icon-check"></i> Up to 100 raw materials</li>
+            <li><i class="fas icon-check"></i> Up to 25 formulations</li>
+            <li><i class="fas icon-check"></i> 10 vendors & 10 categories</li>
+            <li><i class="fas icon-check"></i> CSV import/export</li>
+            <li><i class="fas icon-check"></i> Cost optimization tools</li>
+            <li><i class="fas icon-check"></i> 10 file attachments</li>
+            <li><i class="fas icon-check"></i> 100MB storage</li>
+            <li><i class="fas icon-check"></i> Email support</li>
+          </ul>
+          <a href="https://jcepiphany.myshopify.com/products/pipps-maker-calc?variant=52219037843821" class="btn-cta">Subscribe for $19/month</a>
+        </div>
+
+        <!-- Professional Tier -->
+        <div class="price-card professional-plan">
+          <h3>Professional</h3>
+          <div class="price">$39<span>/month</span></div>
+          <div class="price-details">For growing businesses</div>
+          <ul>
+            <li><i class="fas icon-check"></i> Up to 300 raw materials</li>
+            <li><i class="fas icon-check"></i> Up to 60 formulations</li>
+            <li><i class="fas icon-check"></i> 20 vendors & 20 categories</li>
+            <li><i class="fas icon-check"></i> Advanced cost analytics</li>
+            <li><i class="fas icon-check"></i> 25 file attachments</li>
+            <li><i class="fas icon-check"></i> 500MB storage</li>
+            <li><i class="fas icon-check"></i> Priority email support</li>
+            <li><i class="fas icon-check"></i> Batch optimization</li>
+          </ul>
+          <a href="https://jcepiphany.myshopify.com/products/pipps-maker-calc?variant=52219037876589" class="btn-cta">Subscribe for $39/month</a>
+        </div>
+
+        <!-- Business Tier -->
+        <div class="price-card business-plan">
+          <h3>Business</h3>
+          <div class="price">$65<span>/month</span></div>
+          <div class="price-details">For advanced needs</div>
+          <ul>
+            <li><i class="fas icon-check"></i> Up to 500 raw materials</li>
+            <li><i class="fas icon-check"></i> Up to 100 formulations</li>
+            <li><i class="fas icon-check"></i> 25 vendors & 25 categories</li>
+            <li><i class="fas icon-check"></i> Advanced reporting & analytics</li>
+            <li><i class="fas icon-check"></i> 50 file attachments</li>
+            <li><i class="fas icon-check"></i> 1GB storage</li>
+            <li><i class="fas icon-check"></i> Priority email support</li>
+            <li><i class="fas icon-check"></i> Multi-user access</li>
+          </ul>
+          <a href="https://jcepiphany.myshopify.com/products/pipps-maker-calc?variant=52219037909357" class="btn-cta">Subscribe for $65/month</a>
+        </div>
+
+        <!-- Enterprise Tier -->
+        <div class="price-card enterprise-plan">
+          <h3>Enterprise</h3>
+          <div class="price">$149<span>/month</span></div>
+          <div class="price-details">For large-scale operations</div>
+          <ul>
+            <li><i class="fas icon-check"></i> Up to 1,000 raw materials</li>
+            <li><i class="fas icon-check"></i> Up to 250 formulations</li>
+            <li><i class="fas icon-check"></i> 50 vendors & 50 categories</li>
+            <li><i class="fas icon-check"></i> Premium reporting suite & custom analytics</li>
+            <li><i class="fas icon-check"></i> Custom integrations</li>
+            <li><i class="fas icon-check"></i> 100 file attachments</li>
+            <li><i class="fas icon-check"></i> 10GB storage</li>
+            <li><i class="fas icon-check"></i> Dedicated support manager</li>
+          </ul>
+          <a href="https://jcepiphany.myshopify.com/products/pipps-maker-calc?variant=52219037942125" class="btn-cta">Contact Us</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <!-- Linked Company Name -->
+    <p><a href="https://www.pipps.app" target="_blank" rel="noopener noreferrer">© 2025 PIPPS Smart Apps</a>. All rights reserved.</p>
+    <p style="font-size: 0.85em; color: #9ca3af; margin-top: 0.5rem;">A Brand of <a href="https://jcepiphany.com/" target="_blank" rel="noopener noreferrer" style="color: #9ca3af; text-decoration: underline;">J.C Epiphany</a></p>
+    <p style="font-size: 0.9em; color: #9ca3af;">Version 1.0 - We're constantly adding new features!</p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    // Get the button and sections
+    var backToTopBtn = document.getElementById("backToTopBtn");
+
+    // When the user scrolls down 200px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    backToTopBtn.onclick = function() {
+      // Smooth scrolling
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
+
+    // Add smooth scrolling to section links in the nav
+    document.querySelectorAll('nav.section-nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
