@@ -4,7 +4,7 @@ A professional landing page for PIPPS Maker Calc - a powerful SaaS platform for 
 
 ## 🚀 Live Demo
 
-Visit the live site: [PIPPS Maker Calc](https://yourusername.github.io/maker-calc-landing/)
+Visit the live site: [PIPPS Maker Calc](https://pipps-app.github.io/maker-calc-landing-page/)
 
 ## 📋 Features
 

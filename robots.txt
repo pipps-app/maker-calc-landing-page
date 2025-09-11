@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://yourusername.github.io/maker-calc-landing/sitemap.xml
+Sitemap: https://pipps-app.github.io/maker-calc-landing-page/sitemap.xml
 
 # AI Crawlers
 User-agent: GPTBot
