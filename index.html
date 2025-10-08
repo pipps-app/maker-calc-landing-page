@@ -1,68 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ============================================ -->
+  <!-- Basic Meta Tags -->
+  <!-- ============================================ -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <!-- Primary Meta Tags -->
+  <!-- ============================================ -->
+  <!-- Primary Meta Tags for SEO -->
+  <!-- ============================================ -->
   <title>PIPPS Maker Calc: Private Formulation Cost Calculator | Secure Recipe Management</title>
   <meta name="title" content="PIPPS Maker Calc: Private Formulation Cost Calculator | Secure Recipe Management">
-  <meta name="description" content="Calculate product formulation costs with bank-level privacy. Track materials, analyze margins, export reports. Free: 25 materials, 5 formulations. Perfect for cosmetics, soap, supplements makers.">
+  <meta name="description" content="Private formulation cost calculator with bank-level encryption. Free: 25 materials, 5 formulations. Perfect for cosmetics, soap, supplements & food makers.">
   <meta name="keywords" content="formulation calculator, recipe cost calculator, product cost management, cosmetic formulation software, private recipe management, batch cost calculator, soap cost calculator">
   <meta name="author" content="PIPPS Smart Apps - J.C Epiphany">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   
+  <!-- ============================================ -->
+  <!-- Canonical URL -->
+  <!-- ============================================ -->
+  <link rel="canonical" href="https://www.pipps.app/">
+  <link rel="alternate" href="https://pipps-app.github.io/maker-calc-landing-page/" />
+  
+  <!-- ============================================ -->
+  <!-- Mobile & Browser Tags -->
+  <!-- ============================================ -->
+  <meta name="theme-color" content="#4f46e5">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  
+  <!-- ============================================ -->
+  <!-- Security & Privacy Meta Tags -->
+  <!-- ============================================ -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <!-- ============================================ -->
+  <!-- DNS Prefetch & Preconnect for Performance -->
+  <!-- ============================================ -->
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="//images.unsplash.com">
+  <link rel="dns-prefetch" href="//static.wixstatic.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  
+  <!-- ============================================ -->
+  <!-- Open Graph / Facebook -->
+  <!-- ============================================ -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.pipps.app/">
+  <meta property="og:site_name" content="PIPPS Maker Calc">
+  <meta property="og:title" content="PIPPS Maker Calc: Private Formulation Cost Calculator | Secure Recipe Management">
+  <meta property="og:description" content="Stop losing money on formulations. Calculate true costs in minutes with bank-level privacy. Free forever tier: 25 materials, 5 formulations. Perfect for cosmetics, soap, supplements makers.">
+  <meta property="og:image" content="https://static.wixstatic.com/media/297e2c_219dd8a8a2004c38ae6baf48171cea73~mv2.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PIPPS Maker Calc - Private Formulation Cost Calculator">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- ============================================ -->
+  <!-- Twitter Card -->
+  <!-- ============================================ -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.pipps.app/">
+  <meta property="twitter:title" content="PIPPS Maker Calc: Private Formulation Cost Calculator">
+  <meta property="twitter:description" content="Stop losing money on formulations. Know your true costs in minutes with military-grade privacy. Free forever tier available.">
+  <meta property="twitter:image" content="https://static.wixstatic.com/media/297e2c_219dd8a8a2004c38ae6baf48171cea73~mv2.png">
+  <meta property="twitter:image:alt" content="PIPPS Maker Calc - Private Formulation Cost Calculator">
+  <meta name="twitter:creator" content="@pipps_app">
+  <meta name="twitter:site" content="@pipps_app">
+  
+  <!-- ============================================ -->
   <!-- Pinterest Domain Verification -->
+  <!-- ============================================ -->
   <meta name="p:domain_verify" content="737c4612934762916c635e692857e535"/>
   
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://pipps-app.github.io/maker-calc-landing-page/">
-  <meta property="og:title" content="PIPPS Maker Calc: Private Formulation Cost Calculator">
-  <meta property="og:description" content="Stop losing money on formulations. Know your true costs in minutes with military-grade privacy. Free forever tier available.">
-  <meta property="og:image" content="https://static.wixstatic.com/media/297e2c_219dd8a8a2004c38ae6baf48171cea73~mv2.png">
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://pipps-app.github.io/maker-calc-landing-page/">
-  <meta property="twitter:title" content="PIPPS Maker Calc: Private Formulation Cost Calculator">
-  <meta property="twitter:description" content="Stop losing money on formulations. Know your true costs in minutes with military-grade privacy.">
-  <meta property="twitter:image" content="https://static.wixstatic.com/media/297e2c_219dd8a8a2004c38ae6baf48171cea73~mv2.png">
-  
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://pipps-app.github.io/maker-calc-landing-page/">
-  
+  <!-- ============================================ -->
   <!-- Favicon -->
+  <!-- ============================================ -->
   <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/297e2c_219dd8a8a2004c38ae6baf48171cea73~mv2.png">
+  <link rel="apple-touch-icon" href="https://static.wixstatic.com/media/297e2c_219dd8a8a2004c38ae6baf48171cea73~mv2.png">
   
-  <!-- Structured Data -->
+  <!-- ============================================ -->
+  <!-- Structured Data: SoftwareApplication Schema -->
+  <!-- ============================================ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "PIPPS Maker Calc",
-    "description": "Private formulation cost calculator for product makers",
+    "description": "Private formulation cost calculator for product makers with bank-level encryption. Calculate material costs, analyze profit margins, track vendors, and export professional reports. Built for cosmetics, soap, supplements, and food & beverage manufacturers.",
     "url": "https://www.pipps.app",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web Browser",
+    "browserRequirements": "Requires JavaScript. Requires HTML5.",
+    "softwareVersion": "1.0",
+    "screenshot": "https://static.wixstatic.com/media/297e2c_219dd8a8a2004c38ae6baf48171cea73~mv2.png",
+    "featureList": [
+      "Private formulation cost calculation",
+      "Material cost tracking and management",
+      "Profit margin analysis",
+      "Vendor management",
+      "CSV import and export",
+      "Professional PDF reports",
+      "Batch cost optimization",
+      "Category organization",
+      "Bank-level 256-bit encryption",
+      "File attachments for materials",
+      "Multi-currency support",
+      "Cost per unit calculations"
+    ],
     "offers": [
       {
         "@type": "Offer",
         "name": "Free Plan",
         "price": "0",
-        "priceCurrency": "USD"
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "0",
+          "priceCurrency": "USD",
+          "billingDuration": "P1M"
+        },
+        "description": "25 materials, 5 formulations, 5 vendors & categories, basic cost calculations, CSV export"
       },
       {
-        "@type": "Offer", 
+        "@type": "Offer",
+        "name": "Starter Plan",
+        "price": "7",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "7.00",
+          "priceCurrency": "USD",
+          "billingDuration": "P1M"
+        },
+        "description": "50 materials, 15 formulations, 10 vendors & categories, all cost tools, CSV import/export"
+      },
+      {
+        "@type": "Offer",
         "name": "Pro Plan",
         "price": "19",
-        "priceCurrency": "USD"
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "19.00",
+          "priceCurrency": "USD",
+          "billingDuration": "P1M"
+        },
+        "description": "100 materials, 25 formulations, 15 vendors & categories, advanced analytics, cost optimization"
+      },
+      {
+        "@type": "Offer",
+        "name": "Professional Plan",
+        "price": "39",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "39.00",
+          "priceCurrency": "USD",
+          "billingDuration": "P1M"
+        },
+        "description": "300 materials, 60 formulations, 20 vendors & categories, premium analytics, batch optimization"
+      },
+      {
+        "@type": "Offer",
+        "name": "Business Plan",
+        "price": "65",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "65.00",
+          "priceCurrency": "USD",
+          "billingDuration": "P1M"
+        },
+        "description": "500 materials, 100 formulations, unlimited vendors & categories, advanced reporting, multi-user access"
+      },
+      {
+        "@type": "Offer",
+        "name": "Enterprise Plan",
+        "price": "149",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "149.00",
+          "priceCurrency": "USD",
+          "billingDuration": "P1M"
+        },
+        "description": "1000+ materials, 250+ formulations, unlimited vendors & categories, custom analytics, team collaboration"
       }
     ],
     "creator": {
       "@type": "Organization",
-      "name": "PIPPS Smart Apps"
+      "@id": "https://www.pipps.app/#organization",
+      "name": "PIPPS Smart Apps",
+      "url": "https://www.pipps.app",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://static.wixstatic.com/media/297e2c_219dd8a8a2004c38ae6baf48171cea73~mv2.png"
+      },
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "J.C Epiphany"
+      }
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Small manufacturers, cosmetic formulators, soap makers, supplement makers, food and beverage producers"
     }
+  }
+  </script>
+  
+  <!-- ============================================ -->
+  <!-- Structured Data: Organization Schema -->
+  <!-- ============================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.pipps.app/#organization",
+    "name": "PIPPS Smart Apps",
+    "url": "https://www.pipps.app",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://static.wixstatic.com/media/297e2c_219dd8a8a2004c38ae6baf48171cea73~mv2.png",
+      "width": 200,
+      "height": 200
+    },
+    "description": "PIPPS Smart Apps creates privacy-first business tools for small manufacturers and product makers, including formulation cost calculators and production management software.",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "J.C Epiphany"
+    },
+    "foundingDate": "2024",
+    "founder": {
+      "@type": "Organization",
+      "name": "J.C Epiphany"
+    },
+    "areaServed": "Worldwide",
+    "knowsAbout": [
+      "Formulation Cost Management",
+      "Recipe Costing Software",
+      "Product Development Tools",
+      "Manufacturing Software",
+      "Privacy-First Business Applications"
+    ]
+  }
+  </script>
+  
+  <!-- ============================================ -->
+  <!-- Structured Data: FAQPage Schema -->
+  <!-- ============================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is my data safe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. All data is encrypted with 256-bit encryption (the same level banks use). We never share or sell your information, and you can export and delete your data anytime. Your formulations are YOUR intellectual property."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I export my data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. You can export all your materials, formulations, and reports as CSV/PDF anytime. Your data is yours - no lock-in, ever."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I cancel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can downgrade to the free tier anytime and keep 25 materials + 5 formulations. Or export everything and delete your account - no questions asked. We believe in data freedom."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you see my formulations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Your data is encrypted and private. We cannot access your proprietary recipes. Your trade secrets stay secret."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I change plans anytime?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Upgrade or downgrade anytime from your account settings. No contracts, no commitments. Pay only for what you need."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there really a free plan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! The free tier includes 25 materials and 5 formulations - forever. It's fully functional, not a limited trial. Perfect for hobbyists or testing the platform."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a credit card for the free plan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Start using PIPPS immediately with no credit card required. Only paid plans require payment information."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's your refund policy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All paid plans include a 14-day money-back guarantee. If you're not satisfied, we'll refund you - no hassle, no questions."
+        }
+      }
+    ]
+  }
+  </script>
+  
+  <!-- ============================================ -->
+  <!-- Structured Data: BreadcrumbList Schema -->
+  <!-- ============================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.pipps.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "PIPPS Maker Calc",
+        "item": "https://www.pipps.app/"
+      }
+    ]
   }
   </script>
   <style>
